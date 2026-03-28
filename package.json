@@ -3,7 +3,12 @@
   "displayName": "NewAPI Bar",
   "description": "New-API balance & usage in your status bar",
   "version": "0.0.1",
-  "publisher": "local",
+  "icon": "icon.png",
+  "publisher": "Jimmy246",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nEvErMoReaken/newapi-bar"
+  },
   "engines": {
     "vscode": "^1.60.0"
   },
