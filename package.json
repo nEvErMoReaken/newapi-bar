@@ -1,0 +1,64 @@
+{
+  "name": "newapi-bar",
+  "displayName": "NewAPI Bar",
+  "description": "New-API balance & usage in your status bar",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "newapiStatus.refresh",
+        "title": "New API: Refresh Status"
+      }
+    ],
+    "configuration": {
+      "title": "New API Status",
+      "properties": {
+        "newapiStatus.baseUrl": {
+          "type": "string",
+          "default": "",
+          "description": "New-API instance base URL"
+        },
+        "newapiStatus.token": {
+          "type": "string",
+          "default": "",
+          "description": "System access token"
+        },
+        "newapiStatus.userId": {
+          "type": "number",
+          "default": 0,
+          "description": "User ID"
+        },
+        "newapiStatus.refreshInterval": {
+          "type": "number",
+          "default": 60,
+          "description": "Auto refresh interval (minutes)"
+        },
+        "newapiStatus.slides": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "$(credit-card) ${today} / ${balance}",
+            "$(graph) ${percent} ${bar}",
+            "$(history) ${total_requests} reqs  $(zap)${rpm}rpm"
+          ],
+          "markdownDescription": "状态栏轮播内容，每项依次显示。支持 VSCode 图标 `$(icon-name)` 和以下占位符：\n\n| 占位符 | 说明 |\n|---|---|\n| `${balance}` | 余额 如 $2.85 |\n| `${balance_tokens}` | 余额 tokens 数 |\n| `${today}` | 今日消耗 |\n| `${today_tokens}` | 今日消耗 tokens |\n| `${today_requests}` | 今日请求次数 |\n| `${monthly}` | 本月消耗 |\n| `${monthly_tokens}` | 本月消耗 tokens |\n| `${used}` | 累计消耗 |\n| `${total}` | 总额（余额+消耗）|\n| `${percent}` | 余额百分比 |\n| `${bar}` | 进度条 ████░░ |\n| `${total_requests}` | 累计请求次数 |\n| `${rpm}` | 每分钟请求数 |\n| `${tpm}` | 每分钟 tokens |\n| `${update_time}` | 上次更新时间 |"
+        },
+        "newapiStatus.slideInterval": {
+          "type": "number",
+          "default": 4,
+          "description": "Seconds between carousel slides"
+        }
+      }
+    }
+  }
+}
