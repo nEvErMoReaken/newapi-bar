@@ -23,9 +23,11 @@ Extensions → ··· → Install from VSIX
 
 ## Configuration
 
+> **Get your credentials:** In your New-API instance, go to **Personal Settings → Security Settings → System Access Token**. The token and your user ID are both shown on that page.
+
 | Setting | Default | Description |
 |---|---|---|
-| `newapiStatus.baseUrl` | `https://iina.ai` | Your New-API instance URL |
+| `newapiStatus.baseUrl` | — | Your New-API instance URL |
 | `newapiStatus.token` | — | System access token |
 | `newapiStatus.userId` | — | Your user ID |
 | `newapiStatus.refreshInterval` | `60` | Data refresh interval (minutes) |

@@ -2,7 +2,7 @@
   "name": "newapi-bar",
   "displayName": "NewAPI Bar",
   "description": "New-API balance & usage in your status bar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "icon.png",
   "publisher": "Jimmy246",
   "repository": {

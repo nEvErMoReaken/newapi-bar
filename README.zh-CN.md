@@ -23,9 +23,11 @@ EN | [中文](./README.zh-CN.md)
 
 ## 配置
 
+> **获取凭据：** 在你的 New-API 实例中，进入 **个人设置 → 安全设置 → 系统访问令牌**，令牌和用户 ID 均在该页面。
+
 | 设置项 | 默认值 | 说明 |
 |---|---|---|
-| `newapiStatus.baseUrl` | `https://iina.ai` | New-API 实例地址 |
+| `newapiStatus.baseUrl` | — | New-API 实例地址 |
 | `newapiStatus.token` | — | 系统访问令牌 |
 | `newapiStatus.userId` | — | 用户 ID |
 | `newapiStatus.refreshInterval` | `60` | 数据刷新间隔（分钟） |
